@@ -66,8 +66,8 @@ const generate_html_main_page = function(employee_card){
          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
          <title>Team Profile Generator</title>
          <!--<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />-->
-         <link rel="stylesheet" type="text/css" href="./assets/css/reset_v1.css" />
-         <link rel="stylesheet" type="text/css" href="./assets/css/style_v1.css" />
+         <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+         <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
          <!-- include font awesome icons -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
       </head>
@@ -86,10 +86,6 @@ const generate_html_main_page = function(employee_card){
                -->
                ${employee_card}
             </div>
-            <!--
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-            <script type="module" src="./assets/js/script_v8.js"></script>
-            -->
          </main>
       </body>
    </html>      
