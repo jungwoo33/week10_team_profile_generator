@@ -12,12 +12,12 @@ const generate_manager = function(manager){
    <div class="each_person" id="p1">
       <div class="each_person_header">
          <p class="each_person_name">${manager.name}</p>
-         <p class="each_person_level">Manager</p>   
+         <p class="each_person_level"><i class="fa-sharp fa-solid fa-user-pen"></i> Manager</p>   
       </div>
       <div class="each_person_body">
          <p class="id">ID: ${manager.id}</p>
          <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
-         <p class="office_github">Office number: ${manager.office_num}</p>
+         <p class="office">Office number: ${manager.office_num}</p>
       </div>
    </div>
    `;
@@ -28,12 +28,12 @@ const generate_engineer = function(engineer){
    <div class="each_person" id="p1">
       <div class="each_person_header">
          <p class="each_person_name">${engineer.name}</p>
-         <p class="each_person_level">Engineer</p>
+         <p class="each_person_level"><i class="fa-sharp fa-solid fa-user-gear"></i> Engineer</p>
       </div>
       <div class="each_person_body">
          <p class="id">ID: ${engineer.id}</p>
          <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-         <p class="office_github">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+         <p class="github">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
       </div>
    </div>
    `;
@@ -44,12 +44,12 @@ const generate_intern = function(intern){
    <div class="each_person" id="p1">
       <div class="each_person_header">
          <p class="each_person_name">${intern.name}</p>
-         <p class="each_person_level">Intern</p>
+         <p class="each_person_level"><i class="fa-sharp fa-solid fa-user-graduate"></i> Intern</p>
       </div>
       <div class="each_person_body">
          <p class="id">ID: ${intern.id}</p>
          <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
-         <p class="office_github">School: ${intern.school}</p>
+         <p class="school">School: ${intern.school}</p>
       </div>
    </div>
    `;
@@ -68,6 +68,8 @@ const generate_html_main_page = function(employee_card){
          <!--<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />-->
          <link rel="stylesheet" type="text/css" href="./assets/css/reset_v1.css" />
          <link rel="stylesheet" type="text/css" href="./assets/css/style_v1.css" />
+         <!-- include font awesome icons -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
       </head>
    
       <body>

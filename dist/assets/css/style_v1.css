@@ -46,13 +46,15 @@ p {
 .container_box{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
 }
 .each_person{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 30%;
+  width: 25%;
 
   margin: 1.0em;
   box-shadow: 2px 2px 2px grey;
@@ -62,6 +64,7 @@ p {
   color: white;
   padding-left: 1.0em;
   padding-right: 1.0em;
+  font-size: 1.2em;
 }
 .each_person_body{
   background-color: whitesmoke;
@@ -70,11 +73,11 @@ p {
   padding-top: 1.0em;
   padding-bottom: 1.0em;
 }
-.id, .email, .office_github{
+.id, .email, .office, .github, .school{
   border: 1px solid #ddd;
   background-color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.0em;
   padding-left: 1.0em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
