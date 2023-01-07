@@ -1,8 +1,12 @@
 // call node modules:
 const inquirer = require('inquirer');
+const fs = require('fs');
+
+const generate_html = require('./src/generate_html');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
+const { fstat } = require('fs');
 
 // Create an empty array that includes all team members later:
 const team = [];
@@ -245,18 +249,31 @@ function add_employee(){
    }); // End of inquirer
 };
 
-// : ===========================================================!
+// write HTML file ===========================================================!
+//function write_file(){
+const write_file = data =>{
+   fs.writeFile('./dist/index.html',data,(err) => {
+      if(err){
+         console.log(err);
+      }else{
+         console.log("Your team profile has been successfully created in './dist/index.html'");
+      }
+   });
+}
+   
 
+// : ===========================================================!
 add_manager()
    .then(add_employee) // this will include team members
    .then(team => {
       return generate_html(team);
    })
-/*   
+   .then(write_html => {
+      return write_file(write_html);
+   })
    .catch(err=>{
       console.log(err)
    });
-*/
 
 /*
 function Employee(){
